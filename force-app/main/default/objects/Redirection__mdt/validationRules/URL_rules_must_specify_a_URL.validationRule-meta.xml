@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>URL_rules_must_specify_a_URL</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(RuleType__c, &apos;URL&apos;)
+&amp;&amp;
+ISBLANK(Url__c)</errorConditionFormula>
+    <errorDisplayField>Url__c</errorDisplayField>
+    <errorMessage>URL rules must specify a URL</errorMessage>
+</ValidationRule>

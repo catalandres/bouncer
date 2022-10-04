@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_Value_rules_must_specify_details</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(RuleType__c, &apos;Field Value&apos;)
+&amp;&amp;
+(
+  ISBLANK(Object__c)
+  ||
+  ISBLANK(Field__c)
+)</errorConditionFormula>
+    <errorDisplayField>Field__c</errorDisplayField>
+    <errorMessage>Field Value rules must specify an object and a field</errorMessage>
+</ValidationRule>

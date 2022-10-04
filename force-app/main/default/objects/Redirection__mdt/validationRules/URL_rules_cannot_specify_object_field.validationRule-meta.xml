@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>URL_rules_cannot_specify_object_field</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(RuleType__c, &apos;URL&apos;)
+&amp;&amp;
+(
+  NOT(ISBLANK(Object__c))
+  ||
+  NOT(ISBLANK(Field__c))
+)</errorConditionFormula>
+    <errorDisplayField>Object__c</errorDisplayField>
+    <errorMessage>URL rules cannot specify an object or a field</errorMessage>
+</ValidationRule>
